@@ -13,6 +13,28 @@ body {
   color: white;
 }
 
+p.loader {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 38vw;
+  height: 50vh;
+  border: 5px solid green;
+}
+
+.loader::before {
+  content: "";
+  display: block;
+  width: 200px;
+  height: 200px;
+  flex: 0 0 200px;
+  box-shadow: inset 2px 0 0 white, -2px 0 0 white;
+  animation: spin 1s infinite linear;
+  border-radius: 100%;
+  margin: 0;
+  transform-origin: center;
+}
+
 input {
   display: block;
   width: 100%;
@@ -130,6 +152,16 @@ p {
   from { transform: rotate(360deg); }
 }
 
+/* for loader */
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
 /* ------------------------------------------------------------------- */
 
 @media all and (max-width: 1030px) {
@@ -150,6 +182,12 @@ p {
   body {
     margin-left: 18%;
   }
+
+  p.loader {
+    width: 65vw;
+    height: 30vh;
+  }
+  
 }
 
 @media all and (max-width: 770px) {
@@ -227,6 +265,17 @@ p {
 @media all and (max-width: 440px) {
   body {
     margin-top: 6px;
+  }
+
+  p.loader {
+    width: 75vw;
+    height: 30vh;
+  }
+
+  .loader::before {
+    width: 100px;
+    height: 100px;
+    flex: 0 0 100px;
   }
 
   h1 {

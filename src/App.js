@@ -11,7 +11,7 @@ function App() {
   const[taskId, setTaskId] = useState("");
 
   useEffect(() => {
-    getAllTasks(setTask)
+    getAllTasks(setTask);
   }, [])
 
   const updatingInInput = (_id, title) => {
@@ -40,6 +40,17 @@ function App() {
         >
           {editing ? "EDIT" : "ADD"}
         </button>
+      </div>
+
+      <div>
+          {
+            myTask.length === 0 ? 
+              <div>
+                <p>Loading... Please wait.</p>
+                <p className="loader"></p>
+              </div>
+            : null
+          }
       </div>
 
       {myTask.map((task) => 
