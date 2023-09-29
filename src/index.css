@@ -19,7 +19,6 @@ p.loader {
   justify-content: center;
   width: 38vw;
   height: 50vh;
-  border: 5px solid green;
 }
 
 .loader::before {
