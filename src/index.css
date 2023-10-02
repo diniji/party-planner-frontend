@@ -9,7 +9,7 @@ body {
   display: flex;
   margin-left: 60px;
   margin-top: 50px;
-  font-family: 'Princess Sofia', cursive;
+  font-family: 'Shantell Sans', cursive;
   color: white;
 }
 
@@ -45,7 +45,7 @@ input {
 button {
   border: none;
   color: white;
-  font-family: 'Princess Sofia', cursive;
+  font-family: 'Shantell Sans', cursive;
   font-weight: bold;
   font-size: 17px;
   letter-spacing: .5px;
